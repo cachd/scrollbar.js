@@ -1,0 +1,14 @@
+{
+  "name": "scrollbar.js",
+  "main": "scrollbar.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Cinamonas/scrollbar.js",
+  "authors": [
+    "Aleksandras Nelkinas <alex@cinamonas.io>"
+  ],
+  "description": "A standalone JavaScript plugin for replacing physical scrollbars with custom ones.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*"
+  ]
+}

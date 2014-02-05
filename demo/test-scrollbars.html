@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Scrollbar Detection Test</title>
+</head>
+<body>
+
+  <script>
+    function testScrollbars() {
+      var wrapper = document.createElement('div'),
+          content = document.createElement('div'),
+          bool;
+
+      wrapper.style.position = 'absolute';
+      wrapper.style.top = '-50px';
+      wrapper.style.height = '50px';
+      wrapper.style.overflow = 'scroll';
+
+      wrapper.appendChild(content);
+      document.body.appendChild(wrapper);
+
+      bool = wrapper.offsetWidth > content.offsetWidth;
+
+      document.body.removeChild(wrapper);
+
+      return bool;
+    }
+
+    document.body.style.backgroundColor = testScrollbars() ? '#DFD' : '#FDD';
+  </script>
+
+</body>
+</html>

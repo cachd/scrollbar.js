@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>scrollbar.js</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="http://yui.yahooapis.com/3.14.1/build/cssreset/cssreset-min.css">
+  <link rel="stylesheet" href="../scrollbar.css">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+
+  <div class="scrollpane">
+    <div class="scrollbar-area">
+      <div class="scrollbar-wrapper">
+        <ul class="list">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+        </ul>
+      </div>
+      <div class="scrollbar-track">
+        <div class="scrollbar-handle"></div>
+      </div>
+      <ul class="controls">
+        <li><a class="push" onclick="pushItem()">+</a></li>
+        <li><a class="pop" onclick="popItem()">–</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="../scrollbar.js"></script>
+  <script>
+    // jQuery is used for easy DOM manipulation inside this demo. It is not a dependency!
+
+    var $scrollpane = $('.scrollpane'),
+        $list = $scrollpane.find('.list'),
+        scrollbar;
+
+    scrollbar = new Scrollbar($scrollpane[0]);
+
+    function pushItem() {
+      var $items = $list.children();
+
+      $list.append($('<li>' + ($items.length + 1) + '</li>'));
+      scrollbar.refresh();
+    }
+
+    function popItem() {
+      var $items = $list.children();
+
+      $items.last().remove();
+      scrollbar.refresh();
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #F0F0F0;
+  font: 100%/1 Helvetica, Arial, sans-serif;
+}
+
+.scrollpane {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 200px;
+  margin: -100px 0 0 -150px;
+  border: 1px solid #BBB;
+  border-top-color: #777;
+  border-left-color: #777;
+  background: #FFF;
+}
+.list li {
+  line-height: 60px;
+  text-align: center;
+}
+.list li:nth-child(2n) {
+  background: #F5F5F5;
+}
+.controls {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.controls li {
+  float: left;
+}
+.controls a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  margin-right: 3px;
+  text-align: center;
+  border: 1px solid #333;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.controls a.push {
+  background: #DFD;
+}
+  .controls a.push:hover {
+    background: #BFB;
+  }
+  .controls a.push:active {
+    background: #9F9;
+  }
+.controls a.pop {
+  background: #FDD;
+}
+  .controls a.pop:hover {
+    background: #FBB;
+  }
+  .controls a.pop:active {
+    background: #F99;
+  }
