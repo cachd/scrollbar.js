@@ -5,6 +5,11 @@ A standalone JavaScript plugin for replacing physical scrollbars with custom one
 
 Mobile devices retain their native scrollbars.
 
+Demo
+----
+
+View it [here](http://cinamonas.github.io/scrollbar.js/demo/).
+
 License
 -------
 
