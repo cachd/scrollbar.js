@@ -102,7 +102,7 @@
     refresh: function () {
       var newRatio;
 
-      if (!this.el || !this.scrollbarWidth) {
+      if (!this.el || this.isNative()) {
         return;
       }
 
@@ -120,6 +120,15 @@
       } else {
         this.track.style.display = 'none';
       }
+    },
+
+    /**
+     * Checks if native scroll is enabled.
+     *
+     * @returns {Boolean}
+     */
+    isNative: function () {
+      return !this.scrollbarWidth;
     },
 
 
