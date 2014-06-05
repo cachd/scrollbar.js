@@ -3,7 +3,7 @@
  * Mobile devices retain their native scrollbars.
  *
  * @name scrollbar.js
- * @version 0.1.0
+ * @version 0.1.1
  * @author Aleksandras Nelkinas <alex@cinamonas.io>
  * @license [MIT]{@link http://opensource.org/licenses/mit-license.php}
  *
